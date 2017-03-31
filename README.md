@@ -40,15 +40,15 @@ Ok now you'r ready to go. Create a node project and install bot-api:
     const bot = new TelegramBot(token, {polling: true});
   Lets try out our bot and do some real world things .We need to get messages that user sends us , to do so we would use following code:
   
-
+```js
     bot.on('message', (msg) => {
     
      //anything
      
     });
-    
+```
 Lets create simple greeting here. Here's big picture of our code :
-
+```js
     const TelegramBot = require('node-telegram-bot-api'); 
     const token = 'YOUR_TELEGRAM_BOT_TOKEN';
     const bot = new TelegramBot(token, {polling: true});
@@ -58,6 +58,7 @@ Lets create simple greeting here. Here's big picture of our code :
      //anything
      
     });
+```
   We were try to greet and we'll do it here:
  
 
