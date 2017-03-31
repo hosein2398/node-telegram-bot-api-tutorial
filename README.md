@@ -17,6 +17,7 @@ Grab that token and keep somewhere safe.
 
 Now that you bot is created maybe you want to set a description for that.
 description are those messages showing in middle of the page usually  describing what this bot can do.
+
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/desc.JPG" height="500" width="400">
 
 To set description for you bot in BotFather write "/setdescription" and send , then chose the bot you mean to change it's description and send description you want to be shown in you bot.
