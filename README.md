@@ -136,7 +136,7 @@ Answer is really simple you can send a caption with option on photo like so :
 
 Lets go a step further and start working with [keyboards](https://core.telegram.org/bots#keyboards).
 keyboards are atcually the ones shown in this picture:
-![enter image description here](https://core.telegram.org/file/811140184/1/5YJxx-rostA/ad3f74094485fb97bd  =100x200)
+![enter image description here](https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/keyboard.jpg  =300x200)
 
 Keyboards are nothing but an easy way to send messages. It's like your not forcing users to write something down and send it to bot but instead your demonstrating them some options that they can tap on and a message will be sent after that.
 So lets see how we can create Keyboards , we'll send Keyboards on "/start" message:
