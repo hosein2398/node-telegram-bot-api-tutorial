@@ -13,11 +13,11 @@ To create a bot on Telegram messenger firstly you need to contact with @BotFathe
 Dear Father will ask you what you want to call you bot and you'll chose a name , and then you need to make a username for your bot , actually something that ends with the word 'bot' like: "my_test_bot".
 If you write a username which is available, BotFather will send you a token.
 Grab that token and keep somewhere safe.
-![enter image description here](https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/BotFather.JPG)
+<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/BotFather.JPG" height="500" width="400">
 
 Now that you bot is created maybe you want to set a description for that.
 description are those messages showing in middle of the page usually  describing what this bot can do.
-![enter image description here](https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/desc.JPG)
+<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/desc.JPG" height="500" width="400">
 
 To set description for you bot in BotFather write "/setdescription" and send , then chose the bot you mean to change it's description and send description you want to be shown in you bot.
 
@@ -78,7 +78,7 @@ Ok , now open up you command prompt and type:
 
     node index.js
   Go to your bot and hit on "/start" and then type "Hi" to it:
-![enter image description here](https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/first%20message.JPG)
+<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/first%20message.JPG" height="500" width="400">
 
   So now that you know how to send and receive messages in your bot you may want to put some salt on it:
   
@@ -98,7 +98,7 @@ Ok , now open up you command prompt and type:
     });
 ```
 This time we're using "includes" method so if user sends us anything containing "bye" word we'll send him back the message:
-![enter image description here](https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Bye.JPG)
+<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Bye.JPG" height="500" width="400">
 And definitely you can use any other string method that you want.
 
 That's really common to send user a message describing use of bot while he taps on "/start". (these are called [commands](https://core.telegram.org/bots#commands))
