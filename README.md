@@ -3,10 +3,13 @@ This is a beginners guide for [node-telegram-bot-api](https://github.com/yagop/n
 
  
 
- - Getting started with BotFather
+ - [Creating new bot with BotFather](#Creating+new+bot+with+BotFather)
  - Getting started
  -  Getting started
  
+ 
+ <a name="Creating+new+bot+with+BotFather"></a>
+## Creating new bot with BotFather
 To create a bot on Telegram messenger firstly you need to contact with @BotFather .So go ahead and search for @BotFather in your messenger.
  Once you got there you should ask BotFather to give you a token.
  You could do this by typing  "/newbot" and sending it to BotFather.
