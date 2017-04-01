@@ -7,6 +7,7 @@ This is a beginners guide for [node-telegram-bot-api](https://github.com/yagop/n
  - [First message](#First+message)
  - [Commands](#Commands)
  - [Keyboards](#Keyboards)
+ - [User](#User)
  
  <a name="Creating+new+bot+with+BotFather"></a>
 ### Creating new bot with BotFather
@@ -160,14 +161,15 @@ bot.onText(/\/start/, (msg) => {
     
 bot.sendMessage(msg.chat.id, "Welcome", {
 "reply_markup": {
-    "keyboard": [["Sample text", "Second sample"],   ["Keyboard"], ["I'm              robot"]]
+    "keyboard": [["Sample text", "Second sample"],   ["Keyboard"], ["I'm robot"]]
     }
 });
     
 });
 ```
 So now if you run you will see:
-PIC
+
+<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Keyboards.JPG" height="500" width="400">
 
 As I said in fact Keyboards are not nothing but automatic type and send for user. There is no difference if you write "I'm robot" and sending on your own or you click on Keyboard. Lets do something simple when that "I'm robot"  is received so add this up to your previous on message:
 ```js
@@ -188,7 +190,8 @@ if (msg.text.indexOf(robot) === 0) {
 ```
    So now if you go to your bot tap on start you see Keyboards and if you tap on I'm robot you'll see the message. Note that there is no difference if you type it or you send it by Keyboards.
 
-
+ <a name="User"></a>
+### User
 node-telegram-bot-api does not have any method to get users information but in case if you want to you can get information like so:
 ```js
 var Hi = "hi";
@@ -196,7 +199,9 @@ if (msg.text.toLowerCase().indexOf(Hi) === 0) {
     bot.sendMessage(msg.from.id, "Hello  " + msg.from.first_name);
 }
 ```
-PIC
+
+<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/usersname.JPG" height="500" width="400">
+
 And if you wanted to get user profile pictures you can use [getUserProfilePhotos](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#telegrambotgetuserprofilephotosuserid-options--promise) .
 
 More coming up soon.
