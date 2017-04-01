@@ -5,14 +5,12 @@ This is a beginners guide for [node-telegram-bot-api](https://github.com/yagop/n
 
  - [Creating new bot with BotFather](#Creating+new+bot+with+BotFather)
  - [First message](#First+message)
- - Getting started
- 
+ - [Commands](#Commands)
+ - [Keyboards](#Keyboards)
  
  <a name="Creating+new+bot+with+BotFather"></a>
 ### Creating new bot with BotFather
-To create a bot on Telegram messenger firstly you need to contact with @BotFather .  
-So go ahead and search for @BotFather in your messenger.  
-Once you got there you should ask BotFather to give you a token.  
+To create a bot on Telegram messenger firstly you need to contact with @BotFather .So go ahead and search for @BotFather in your messenger.Once you got there you should ask BotFather to give you a token.  
 You could do this by typing  "/newbot" and sending it to BotFather.  
 Dear Father will ask you what you want to call you bot and you'll chose a name , and then you need to make a username for your bot , actually something that ends with the word 'bot' like: "my_test_bot".  
 If you write a username which is available, BotFather will send you a token.  
@@ -59,7 +57,7 @@ bot.on('message', (msg) => {
 ```
 Lets create simple greeting here. Here's big picture of our code :
 ```js
-    const TelegramBot = require('node-telegram-bot-api'); 
+const TelegramBot = require('node-telegram-bot-api'); 
 const token = 'YOUR_TELEGRAM_BOT_TOKEN';
 const bot = new TelegramBot(token, {polling: true});
     
@@ -110,6 +108,9 @@ This time we're using "includes" method so if user sends us anything containing 
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Bye.JPG" height="500" width="400">
 And definitely you can use any other string method that you want.
 
+
+ <a name="Commands"></a>
+### Commands
 That's really common to send user a message describing use of bot while he taps on "/start". (these are called [commands](https://core.telegram.org/bots#commands))
 To do so :
 ```js
@@ -144,6 +145,8 @@ bot.sendPhoto(msg.chat.id,"https://www.somesite.com/image.jpg",{caption : "Here 
 ```
   So now you know how to create captions and how to go to new line in your messages by typing \n .
 
+ <a name="Keyboards"></a>
+### Keyboards
 Lets go a step further and start working with [keyboards](https://core.telegram.org/bots#keyboards).
 keyboards are atcually the ones shown in this picture:
 
