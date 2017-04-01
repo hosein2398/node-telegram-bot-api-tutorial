@@ -11,7 +11,7 @@ This is a beginners guide for [node-telegram-bot-api](https://github.com/yagop/n
  - [Inline keyboards](#Inline+Keybords)
  - [parse_mode](#parse_mode)
  - [Location and Number](#Location+and+Number)
- - [Interacting with groups and channels][#grpups+and+channel+interaction]
+ - [Interacting with groups and channels](#grpups+and+channel+interaction)
  
  <a name="Creating+new+bot+with+BotFather"></a>
 ### Creating new bot with BotFather
