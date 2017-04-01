@@ -226,8 +226,28 @@ bot.on('message', (msg) => {
 });
 ```
 So you get idea where <code>parse_mode</code> is defined.Now if we run this:
+
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/parse_mode.JPG" height="500" width="400">
 
+So that's how we do it with Html you can also write with Markdown.As mentioned in official api of Telegram only these tags are supported til now:
+
+```
+<b>bold</b>, <strong>bold</strong>
+<i>italic</i>, <em>italic</em>
+<a href="http://www.example.com/">inline URL</a>
+<code>inline fixed-width code</code>
+<pre>pre-formatted fixed-width code block</pre>
+```
+And for Markdown you can only use:
+```
+*bold text*
+_italic text_
+[text](http://www.example.com/)
+`inline fixed-width code`
+```text
+pre-formatted fixed-width code block
+```
+```
  <a name="Location+and+Number"></a>
 ### Location and Number
 
