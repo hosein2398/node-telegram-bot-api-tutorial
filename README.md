@@ -9,6 +9,9 @@ This is a beginners guide for [node-telegram-bot-api](https://github.com/yagop/n
  - [Keyboards](#Keyboards)
  - [User](#User)
  - [Inline keyboards](#Inline+Keybords)
+ - [parse_mode](#parse_mode)
+ - [Location and Number](#Location+and+Number)
+ - [Interacting with groups and channels][#grpups+and+channel+interaction]
  
  <a name="Creating+new+bot+with+BotFather"></a>
 ### Creating new bot with BotFather
@@ -204,5 +207,14 @@ if (msg.text.toLowerCase().indexOf(Hi) === 0) {
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/usersname.JPG" height="500" width="400">
 
 And if you wanted to get user profile pictures you can use [getUserProfilePhotos](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#telegrambotgetuserprofilephotosuserid-options--promise) .
+
+ <a name="Inline+Keybords"></a>
+### Inline Keybords
+
+ <a name="Location+and+Number"></a>
+### Location and Number
+
+ <a name="grpups+and+channel+interaction"></a>
+### Interacting with groups and channels
 
 More coming up soon.
