@@ -178,7 +178,7 @@ So now if you run you will see:
 
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Keyboards.JPG" height="500" width="400">
 
-As I said in fact Keyboards are not nothing but automatic type and send for user. There is no difference if you write "I'm robot" and sending on your own or you click on Keyboard. Lets do something simple when that "I'm robot"  is received so add this up to your previous on message:
+As I said in fact Keyboards are not nothing but automatic type and send for user. There is no difference if you write "I'm robot" and sending on your own or you click on Keyboard. Lets do something simple when that "I'm robot"  is received.So add this up to your previous on message:
 ```js
 bot.on('message', (msg) => {
 var Hi = "hi";
@@ -199,7 +199,7 @@ if (msg.text.indexOf(robot) === 0) {
 
  <a name="User"></a>
 ### User
-node-telegram-bot-api does not have any method to get users information but in case if you want to you can get information like so:
+node-telegram-bot-api does not have any method to get users information but in case if you want to, you can get information like so:
 ```js
 var Hi = "hi";
 if (msg.text.toLowerCase().indexOf(Hi) === 0) {
