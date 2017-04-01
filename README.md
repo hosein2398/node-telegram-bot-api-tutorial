@@ -4,15 +4,15 @@ This is a beginners guide for [node-telegram-bot-api](https://github.com/yagop/n
  
 
  - [Creating new bot with BotFather](#Creating+new+bot+with+BotFather)
+ - [First message](#First+message)
  - Getting started
- -  Getting started
  
  
  <a name="Creating+new+bot+with+BotFather"></a>
-## Creating new bot with BotFather
+### Creating new bot with BotFather
 To create a bot on Telegram messenger firstly you need to contact with @BotFather .So go ahead and search for @BotFather in your messenger.
- Once you got there you should ask BotFather to give you a token.
- You could do this by typing  "/newbot" and sending it to BotFather.
+Once you got there you should ask BotFather to give you a token.
+You could do this by typing  "/newbot" and sending it to BotFather.
 Dear Father will ask you what you want to call you bot and you'll chose a name , and then you need to make a username for your bot , actually something that ends with the word 'bot' like: "my_test_bot".
 If you write a username which is available, BotFather will send you a token.
 Grab that token and keep somewhere safe.
@@ -25,7 +25,8 @@ description are those messages showing in middle of the page usually  describing
 
 To set description for you bot in BotFather write "/setdescription" and send , then chose the bot you mean to change it's description and send description you want to be shown in you bot.
 
-
+ <a name="First+message"></a>
+### First message
 Ok now you'r ready to go. Create a node project and install bot-api:
 
     npm install --save node-telegram-bot-api
