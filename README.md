@@ -209,7 +209,24 @@ if (msg.text.toLowerCase().indexOf(Hi) === 0) {
 And if you wanted to get user profile pictures you can use [getUserProfilePhotos](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#telegrambotgetuserprofilephotosuserid-options--promise) .
 
  <a name="Inline+Keybords"></a>
-### Inline Keybords
+### Inline Keybords 
+
+
+<a name="parse_mode"></a>
+### parse_mode
+If you want to send messages with some style there, here is how it goes. <code>parse_mode</code> defines how you want you message to be renedered.You can define it inside in your option when sending message.
+Available option are HTML and Markdown.Lets see how it works in action:
+```js
+bot.on('message', (msg) => {
+
+ var Hi = "hi";
+ if (msg.text.toLowerCase().indexOf(Hi) === 0) {
+   bot.sendMessage(msg.chat.id,"<b>bold</b> \n <i>italic</i> \n <em>italic with em</em> \n <a href=\"http://www.example.com/\">inline URL</a> \n <code>inline fixed-width code</code> \n <pre>pre-formatted fixed-width code block</pre>" ,{parse_mode : "HTML"});
+   }
+});
+```
+So you get idea where <code>parse_mode</code> is defined.Now if we run this:
+<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/parse_mode.JPG" height="500" width="400">
 
  <a name="Location+and+Number"></a>
 ### Location and Number
