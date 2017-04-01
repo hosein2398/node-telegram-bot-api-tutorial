@@ -72,7 +72,7 @@ bot.on('message', (msg) => {
      
 });
 ```
-  We were try to greet and we'll do it here:
+  We were trying to greet and we'll do it here:
  
 ```js
 bot.on('message', (msg) => {
@@ -138,7 +138,10 @@ So now if you write "/sendpic" on your bot an image will be sent.
 Sending audios is same and simple you can use "[sendAudio](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#TelegramBot+sendAudio)" method .
 
 Now you might have seen some pictures containing caption with them like the following picture.
-PIC
+
+<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/CaptionJPG.JPG" height="500" width="400">
+
+
 Well , How to to create these?
 Answer is really simple you can send a caption with option on photo like so :
 ```js
@@ -229,7 +232,7 @@ So you get idea where <code>parse_mode</code> is defined.Now if we run this:
 
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/parse_mode.JPG" height="500" width="400">
 
-So that's how we do it with Html you can also write with Markdown.As mentioned in official api of Telegram only these tags are supported til now:
+So that's how we do it with Html you can also write with Markdown.As mentioned in official api of Telegram only these tags are supported till now:
 
 ```
 <b>bold</b>, <strong>bold</strong>
