@@ -214,7 +214,7 @@ And if you wanted to get user profile pictures you can use [getUserProfilePhotos
 
 <a name="parse_mode"></a>
 ### parse_mode
-If you want to send messages with some style there, here is how it goes. <code>parse_mode</code> defines how you want you message to be renedered.You can define it inside in your option when sending message.
+If you want to send messages with some style there, here is how it goes. <code>parse_mode</code> defines how you want you message to be renedered.You can define it inside in your options when sending message.
 Available option are HTML and Markdown.Lets see how it works in action:
 ```js
 bot.on('message', (msg) => {
@@ -244,9 +244,6 @@ And for Markdown you can only use:
 _italic text_
 [text](http://www.example.com/)
 `inline fixed-width code`
-```text
-pre-formatted fixed-width code block
-```
 ```
  <a name="Location+and+Number"></a>
 ### Location and Number
