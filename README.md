@@ -8,6 +8,7 @@ This is a beginners guide for [node-telegram-bot-api](https://github.com/yagop/n
  - [Commands](#Commands)
  - [Keyboards](#Keyboards)
  - [User](#User)
+ - [Inline keyboards](#Inline+Keybords)
  
  <a name="Creating+new+bot+with+BotFather"></a>
 ### Creating new bot with BotFather
