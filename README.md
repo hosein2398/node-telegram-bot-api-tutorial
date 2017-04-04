@@ -214,7 +214,7 @@ And if you wanted to get user profile pictures you can use [getUserProfilePhotos
 
  <a name="Inline+Keybords"></a>
 ### Inline Keybords 
-
+This section is under construction...
 
 <a name="parse_mode"></a>
 ### parse_mode
@@ -284,7 +284,7 @@ bot.on('message', (msg) => {
     
 var bye = "bye";
 if (msg.text.toLowerCase().includes(bye)) {
-bot.sendMessage(msg.chat.id, "Have a nice day " + msg.from.first_name);
+bot.sendMessage(msg.chat.id, "Have a nice day " + msg.from.first_name); 
 } 
 
 });
@@ -295,6 +295,20 @@ Now say something that includes "bye":
 
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Bot.JPG" height="500" width="400">
 
-Now lets do another
+Now lets do another thing , write some codes that bot will remove a person from group if they say a specific word.For instance you can create a bot that will remove member if they curse in group.  
+Here we will write codes that if someone says anything containing "idiot" bot will remove that person from group.
+```js
+bot.on('message', (msg) => {
+    
+var what = "idiot";
+if (msg.text.includes(what)) {
+bot.kickChatMember(msg.chat.id,  msg.from.id);
+}    
+
+});
+```
+Here we have used [kickChatMember](https://github.com/yagop/node-telegram-bot-api/blob/58566d2df5146611a6a3e6140ca616403d24a20e/README.md#telegrambotkickchatmemberchatid-userid--promise) method to remove a member it receives two parameters , first one is id of chat and second one is id of user which you want to remove.Now if you add this bot among admins of a group and somebody says something containing "idiot":
+
+<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Bot_2.JPG" height="500" width="400">
 
 More coming up soon.
