@@ -275,9 +275,26 @@ To send a phone number you can use [sendContact](https://github.com/yagop/node-t
 ### Interacting with groups and channels
 One interesting use of bots is in goupes and channels.You can use bots to manage groupes , receiving users messages and sending groupe messages. You can even send keyboards to members so that they can use the bot easier.  
 For better understanding of how bots can be useful in goupes let create one and add it a group.  
-So we want to create a bot that says "Have a nice day" when any member of group said something containing "Bye" keyword.
+So we want to create a bot that says "Have a nice day _Username_" when any member of group said something containing "Bye" keyword.
 Before doing anything you have to know that a bot has no accessibility to users messages unless we add it as of a administrator.
 And if don't do that bot will only has access to [Commands](https://github.com/hosein2398/node-telegram-bot-api-tutorial#commands) that any user sends to group.And all of this is because of the [Privacy Policy](telegram.com) that Telegram messenger follows which I think is right.
-So lets get back to creating that bot , actualy we don't have to do anything diffrent than creating bot for a single user usage , everything is similiar.
+So lets get back to creating that bot , actually we don't have to do anything diffrent than creating bot for a single user usage , everything is similiar.
+```js
+bot.on('message', (msg) => {
+    
+var bye = "bye";
+if (msg.text.toLowerCase().includes(bye)) {
+bot.sendMessage(msg.chat.id, "Have a nice day " + msg.from.first_name);
+} 
+
+});
+```
+
+Now that we wrote codes go ahead and add this bot to a group , after adding it set it as of a administrator of the group so that it could get users messages.  
+Now say something that includes "bye":
+
+<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Location.JPG" height="500" width="400">
+
+Now lets do another
 
 More coming up soon.
