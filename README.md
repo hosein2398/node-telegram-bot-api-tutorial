@@ -293,7 +293,7 @@ bot.sendMessage(msg.chat.id, "Have a nice day " + msg.from.first_name);
 Now that we wrote codes go ahead and add this bot to a group , after adding it set it as of a administrator of the group so that it could get users messages.  
 Now say something that includes "bye":
 
-<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Location.JPG" height="500" width="400">
+<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Bot.JPG" height="500" width="400">
 
 Now lets do another
 
