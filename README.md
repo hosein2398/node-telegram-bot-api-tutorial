@@ -251,6 +251,21 @@ _italic text_
 ```
  <a name="Location+and+Number"></a>
 ### Location and Number
+There are some methods that enable you to send users location.  
+Here is an example:
+```js
+bot.on('message', (msg) => {
+    var location = "location";
+    if (msg.text.indexOf(location) === 0) {
+        bot.sendLocation(msg.chat.id,44.97108, -104.27719);
+        bot.sendMessage(msg.chat.id, "Here is the point");
+
+    }
+});
+
+```
+
+<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/location.JPG" height="500" width="400">
 
  <a name="grpups+and+channel+interaction"></a>
 ### Interacting with groups and channels
