@@ -265,7 +265,11 @@ bot.on('message', (msg) => {
 
 ```
 
-<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/location.JPG" height="500" width="400">
+<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Location.JPG" height="500" width="400">
+
+
+And there is also [sendVenue](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#telegrambotsendvenuechatid-latitude-longitude-title-address-options--promise).  
+And to send a phone number you can use [sendContact](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#TelegramBot+sendContact).
 
  <a name="grpups+and+channel+interaction"></a>
 ### Interacting with groups and channels
