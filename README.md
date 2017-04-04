@@ -277,7 +277,7 @@ One interesting use of bots is in goupes and channels.You can use bots to manage
 For better understanding of how bots can be useful in goupes let create one and add it a group.  
 So we want to create a bot that says "Have a nice day _Username_" when any member of group said something containing "Bye" keyword.
 Before doing anything you have to know that a bot has no accessibility to users messages unless we add it as of a administrator.
-And if don't do that bot will only has access to [Commands](https://github.com/hosein2398/node-telegram-bot-api-tutorial#commands) that any user sends to group.And all of this is because of the [Privacy Policy](telegram.com) that Telegram messenger follows which I think is right.
+And if don't do that bot will only has access to [Commands](https://github.com/hosein2398/node-telegram-bot-api-tutorial#commands) that any user sends to group.And all of this is because of the [privacy policy](https://core.telegram.org/bots#privacy-mode) that Telegram messenger follows which I think is right.
 So lets get back to creating that bot , actually we don't have to do anything diffrent than creating bot for a single user usage , everything is similiar.
 ```js
 bot.on('message', (msg) => {
@@ -309,6 +309,6 @@ bot.kickChatMember(msg.chat.id,  msg.from.id);
 ```
 Here we have used [kickChatMember](https://github.com/yagop/node-telegram-bot-api/blob/58566d2df5146611a6a3e6140ca616403d24a20e/README.md#telegrambotkickchatmemberchatid-userid--promise) method to remove a member it receives two parameters , first one is id of chat and second one is id of user which you want to remove.Now if you add this bot among admins of a group and somebody says something containing "idiot":
 
-<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Bot_2.JPG" height="500" width="400">
+<img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Bot_2.JPG" height="400" width="300">
 
-More coming up soon.
+We can't cover all methods there are some other methods related to groups and channels: [getChat](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#TelegramBot+getChat) , [getChatAdministrators](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#TelegramBot+getChatAdministrators) , [getChatMembersCount](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#telegrambotgetchatmemberscountchatid--promise) , [getChatMember](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#telegrambotgetchatmemberchatid-userid--promise) , [leaveChat](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#telegrambotleavechatchatid--promise)
