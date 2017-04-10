@@ -29,11 +29,12 @@ Description are those messages showing in middle of the page usually  describing
 
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/desc.JPG" height="500" width="500">
 
-To set description for you bot in BotFather write <code>/setdescription</code> and send , then chose the bot you mean to change it's description and send description you want to be shown in you bot.
+To set description for your bot in BotFather write <code>/setdescription</code> and send , then chose the bot you mean to change it's description and send description you want to be shown in you bot.  
 
+There are some other useful methods in BotFather which we won't cover in this tutorial like <code>/setcommands</code> and other.
  <a name="First+message"></a>
 ### First message
-Ok now you'r ready to go. Create a node project and install bot-api:
+Ok now you're ready to go. Create a node project and install bot-api:
 
     npm install --save node-telegram-bot-api
     
@@ -85,10 +86,10 @@ bot.sendMessage(msg.chat.id,"Hello dear user");
     
 });
 ```
-Ok , now open up you command prompt and type:
+Ok , now open up your command prompt and type:
 
     node index.js
-  Go to your bot and hit on "/start" and then type "Hi" to it:
+  Go to your bot and hit on <code>/start</code> and then type <code>"Hi"</code> to it:
   
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/first%20message.JPG" height="500" width="400">
 
@@ -97,8 +98,8 @@ Ok , now open up you command prompt and type:
 ```js
 bot.on('message', (msg) => {
 
-var Hi = "hi";
-if (msg.text.toLowerCase().indexOf(Hi) === 0) {
+var hi = "hi";
+if (msg.text.toLowerCase().indexOf(hi) === 0) {
 bot.sendMessage(msg.chat.id,"Hello dear user");
 } 
     
