@@ -315,5 +315,5 @@ Here we have used [kickChatMember](https://github.com/yagop/node-telegram-bot-ap
 We can't cover all methods there are some other methods related to groups and channels: [getChat](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#TelegramBot+getChat) , [getChatAdministrators](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#TelegramBot+getChatAdministrators) , [getChatMembersCount](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#telegrambotgetchatmemberscountchatid--promise) , [getChatMember](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#telegrambotgetchatmemberchatid-userid--promise) , [leaveChat](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#telegrambotleavechatchatid--promise)
 
 ### Contributing
-If you found any typos or grammatically wrong sentences you can just make a PR.(In case you were not interested to, you can make an issue.)  
-If you have anything In mind that can improve this tutorial please make a PR.
++ If you found any typos or grammatically wrong sentences you can just make a PR.(In case you were not interested to, you can make an issue.)  
++ If you have anything In mind that can improve this tutorial please make a PR.
