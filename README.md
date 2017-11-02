@@ -45,6 +45,7 @@ const TelegramBot = require('node-telegram-bot-api');
 ```
    Then you need to assign your token witch you got from BotFather:
    
+   
 ```js
 const token = 'YOUR_TELEGRAM_BOT_TOKEN';
 ```
@@ -80,7 +81,7 @@ bot.on('message', (msg) => {
 bot.on('message', (msg) => {
     
 var Hi = "hi";
-if (msg.text.toLowerCase().indexOf(Hi) === 0) {
+if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
 bot.sendMessage(msg.chat.id,"Hello dear user");
 } 
     
@@ -99,12 +100,12 @@ Ok , now open up your command prompt and type:
 bot.on('message', (msg) => {
 
 var hi = "hi";
-if (msg.text.toLowerCase().indexOf(hi) === 0) {
+if (msg.text.toString().toLowerCase().indexOf(hi) === 0) {
 bot.sendMessage(msg.chat.id,"Hello dear user");
 } 
     
 var bye = "bye";
-if (msg.text.toLowerCase().includes(bye)) {
+if (msg.text.toString().toLowerCase().includes(bye)) {
 bot.sendMessage(msg.chat.id, "Hope to see you around again , Bye");
 } 
 
@@ -184,11 +185,11 @@ As I said in fact Keyboards are not nothing but automatic type and send for user
 ```js
 bot.on('message', (msg) => {
 var Hi = "hi";
-if (msg.text.toLowerCase().indexOf(Hi) === 0) {
+if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
     bot.sendMessage(msg.chat.id, "Hello dear user");
 }
 var bye = "bye";
-if (msg.text.toLowerCase().includes(bye)) {
+if (msg.text.toString().toLowerCase().includes(bye)) {
     bot.sendMessage(msg.chat.id, "Hope to see you around again , Bye");
 }    
 var robot = "I'm robot";
@@ -204,7 +205,7 @@ if (msg.text.indexOf(robot) === 0) {
 node-telegram-bot-api does not have any method to get users information but in case if you want to, you can get information like so:
 ```js
 var Hi = "hi";
-if (msg.text.toLowerCase().indexOf(Hi) === 0) {
+if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
     bot.sendMessage(msg.from.id, "Hello  " + msg.from.first_name);
 }
 ```
@@ -225,7 +226,7 @@ Available option are HTML and Markdown.Lets see how it works in action:
 bot.on('message', (msg) => {
 
  var Hi = "hi";
- if (msg.text.toLowerCase().indexOf(Hi) === 0) {
+ if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
    bot.sendMessage(msg.chat.id,"<b>bold</b> \n <i>italic</i> \n <em>italic with em</em> \n <a href=\"http://www.example.com/\">inline URL</a> \n <code>inline fixed-width code</code> \n <pre>pre-formatted fixed-width code block</pre>" ,{parse_mode : "HTML"});
    }
 });
@@ -284,7 +285,7 @@ So lets get back to creating that bot , actually we don't have to do anything di
 bot.on('message', (msg) => {
     
 var bye = "bye";
-if (msg.text.toLowerCase().includes(bye)) {
+if (msg.text.toString().toLowerCase().includes(bye)) {
 bot.sendMessage(msg.chat.id, "Have a nice day " + msg.from.first_name); 
 } 
 
