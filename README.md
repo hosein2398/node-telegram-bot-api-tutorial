@@ -25,11 +25,11 @@ Grab that token and keep somewhere safe.
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/BotFather.JPG" height="500" width="400">
 
 Now that your bot is created maybe you want to set a description for that.  
-Description are those messages showing in middle of the page usually  describing what this bot can do.
+`Description` are those messages showing in middle of the page usually  describing what this bot can do.
 
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/desc.JPG" height="500" width="500">
 
-To set description for your bot in BotFather write <code>/setdescription</code> and send , then chose the bot you mean to change it's description and send description you want to be shown in you bot.  
+To set description for your bot in BotFather write <code>/setdescription</code> and send , then chose the bot you mean to. Change it's description and send description you want to be shown in you bot.  
 
 There are some other useful methods in BotFather which we won't cover in this tutorial like <code>/setcommands</code> and other.
  <a name="First+message"></a>
@@ -43,7 +43,7 @@ Ok now you're ready to go. Create a node project and install bot-api:
 ```js
 const TelegramBot = require('node-telegram-bot-api');
 ```
-   Then you need to assign your token witch you got from BotFather:
+   Then you need to assign your token which you got from BotFather:
    
    
 ```js
@@ -54,7 +54,7 @@ const token = 'YOUR_TELEGRAM_BOT_TOKEN';
 ```js
 const bot = new TelegramBot(token, {polling: true});
 ```
-  Lets try out our bot and do some real world things .We need to get messages that user sends us , to do so we would use following code:
+  Lets try out our bot and do some real world things. We need to get messages that user sends us , to do so we would use following code:
   
 ```js
 bot.on('message', (msg) => {
@@ -154,7 +154,7 @@ bot.sendPhoto(msg.chat.id,"https://www.somesite.com/image.jpg",{caption : "Here 
     
 });
 ```
-  So now you know how to create captions and how to go to new line in your messages by typing \n .
+  So now you know how to create captions and how to go to new line in your messages by typing `\n` .
 
  <a name="Keyboards"></a>
 ### Keyboards
@@ -165,7 +165,7 @@ keyboards are atcually the ones shown in this picture:
 
 
 Keyboards are nothing but an easy way to send messages. It's like your not forcing users to write something down and send it to bot but instead your demonstrating them some options that they can tap on and a message will be sent after that.
-So lets see how we can create Keyboards , we'll send Keyboards on "/start" message:
+So lets see how we can create Keyboards , we'll send a Keyboard on "/start" message:
 ```js
 bot.onText(/\/start/, (msg) => {
     
@@ -316,5 +316,5 @@ Here we have used [kickChatMember](https://github.com/yagop/node-telegram-bot-ap
 We can't cover all methods there are some other methods related to groups and channels: [getChat](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#TelegramBot+getChat) , [getChatAdministrators](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#TelegramBot+getChatAdministrators) , [getChatMembersCount](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#telegrambotgetchatmemberscountchatid--promise) , [getChatMember](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#telegrambotgetchatmemberchatid-userid--promise) , [leaveChat](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#telegrambotleavechatchatid--promise)
 
 ### Contributing
-+ If you found any typos or grammatically wrong sentences you can just make a PR.(In case you were not interested to, you can make an issue.)  
-+ If you have anything In mind that can improve this tutorial please make a PR.
++ If you found any typos or grammatically wrong sentences you can just make a PR.(In case you were not interested to, you can open an issue.)  
++ If you have anything in mind that can improve this tutorial please make a PR.
