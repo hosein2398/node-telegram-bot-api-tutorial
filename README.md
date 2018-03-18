@@ -1,7 +1,7 @@
 # node-telegram-bot-api-tutorial
 
 
-This is a beginners guide for [node-telegram-bot-api](https://github.com/yagop/node-telegram-bot-api) .
+This is a beginner's guide for [node-telegram-bot-api](https://github.com/yagop/node-telegram-bot-api) .
 
 
  - [Creating new bot with BotFather](#Creating+new+bot+with+BotFather)
@@ -13,23 +13,27 @@ This is a beginners guide for [node-telegram-bot-api](https://github.com/yagop/n
  - [parse_mode](#parse_mode)
  - [Location and Number](#Location+and+Number)
  - [Interacting with groups and channels](#grpups+and+channel+interaction)
- 
+
  <a name="Creating+new+bot+with+BotFather"></a>
 ### Creating new bot with BotFather
-To create a bot on Telegram messenger firstly you need to contact with @BotFather .So go ahead and search for @BotFather in your messenger.Once you got there you should ask BotFather to give you a token.  
-You could do this by typing  <code>/newbot</code> and sending it to BotFather.  
-Dear Father will ask you what you want to call your bot, and then you need to make a username for your bot , actually something that ends with the word <code>bot</code> like: <code>my_test_bot</code>.  
-If you write a username which is available, BotFather will send you a token.  
-Grab that token and keep somewhere safe.
+
+The following steps describe how to create a new bot.
+- Contact @BotFather in your Telegram messenger
+- To get a token, send BotFather a message that says  <code>/newbot</code>
+- When asked for a name for your new bot choose something that ends with the word <code>bot</code>. For example, <code>my_test_bot</code>.
+- If your chosen name is available, BotFather will send you a token
+- Save the token
 
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/BotFather.JPG" height="500" width="400">
 
-Now that your bot is created maybe you want to set a description for that.  
-`Description` are those messages showing in middle of the page usually  describing what this bot can do.
+Once your bot is created, you can set a Description for it. `Description` is a message in middle of the page usually describing what the bot can do.
 
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/desc.JPG" height="500" width="500">
 
-To set description for your bot in BotFather write <code>/setdescription</code> and send , then chose the bot you mean to. Change it's description and send description you want to be shown in you bot.  
+To set description for your bot in BotFather do the following:
+- Send <code>/setdescription</code> to BotFather
+- Select the bot for which you are writing a description
+- Change the description and send it to BotFather
 
 There are some other useful methods in BotFather which we won't cover in this tutorial like <code>/setcommands</code> and other.
  <a name="First+message"></a>
@@ -37,77 +41,77 @@ There are some other useful methods in BotFather which we won't cover in this tu
 Ok now you're ready to go. Create a node project and install bot-api:
 
     npm install --save node-telegram-bot-api
-    
+
    Create a file index.js (or any other name) and inside the file require node-telegram-bot-api:
-   
+
 ```js
 const TelegramBot = require('node-telegram-bot-api');
 ```
    Then you need to assign your token which you got from BotFather:
-   
-   
+
+
 ```js
 const token = 'YOUR_TELEGRAM_BOT_TOKEN';
 ```
    And now create a new bot :
-   
+
 ```js
 const bot = new TelegramBot(token, {polling: true});
 ```
   Lets try out our bot and do some real world things. We need to get messages that user sends us , to do so we would use following code:
-  
+
 ```js
 bot.on('message', (msg) => {
-    
+
      //anything
-     
+
 });
 ```
 Lets create simple greeting here. Here's big picture of our code :
 ```js
-const TelegramBot = require('node-telegram-bot-api'); 
+const TelegramBot = require('node-telegram-bot-api');
 const token = 'YOUR_TELEGRAM_BOT_TOKEN';
 const bot = new TelegramBot(token, {polling: true});
-    
+
 bot.on('message', (msg) => {
-    
+
   //anything
-     
+
 });
 ```
   We were trying to greet and we'll do it here:
- 
+
 ```js
 bot.on('message', (msg) => {
-    
+
 var Hi = "hi";
 if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
 bot.sendMessage(msg.chat.id,"Hello dear user");
-} 
-    
+}
+
 });
 ```
 Ok , now open up your command prompt and type:
 
     node index.js
   Go to your bot and hit on <code>/start</code> and then type <code>"Hi"</code> to it:
-  
+
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/first%20message.JPG" height="500" width="400">
 
   So now that you know how to send and receive messages in your bot you may want to put some salt on it:
-  
+
 ```js
 bot.on('message', (msg) => {
 
 var hi = "hi";
 if (msg.text.toString().toLowerCase().indexOf(hi) === 0) {
 bot.sendMessage(msg.chat.id,"Hello dear user");
-} 
-    
+}
+
 var bye = "bye";
 if (msg.text.toString().toLowerCase().includes(bye)) {
 bot.sendMessage(msg.chat.id, "Hope to see you around again , Bye");
-} 
+}
 
 });
 ```
@@ -125,16 +129,16 @@ To do so :
 bot.onText(/\/start/, (msg) => {
 
 bot.sendMessage(msg.chat.id, "Welcome");
-    
+
 });
 ```
   Lets create another command that will send a picture to user:
-  
+
 ```js
 bot.onText(/\/sendpic/, (msg) => {
 
 bot.sendPhoto(msg.chat.id,"https://www.somesite.com/image.jpg" );
-    
+
 });
 ```
 So now if you write "/sendpic" on your bot an image will be sent.
@@ -151,7 +155,7 @@ Answer is really simple you can send a caption with option on photo like so :
 bot.onText(/\/sendpic/, (msg) => {
 
 bot.sendPhoto(msg.chat.id,"https://www.somesite.com/image.jpg",{caption : "Here we go ! \nThis is just a caption "} );
-    
+
 });
 ```
   So now you know how to create captions and how to go to new line in your messages by typing `\n` .
@@ -168,13 +172,13 @@ Keyboards are nothing but an easy way to send messages. It's like your not forci
 So lets see how we can create Keyboards , we'll send a Keyboard on "/start" message:
 ```js
 bot.onText(/\/start/, (msg) => {
-    
+
 bot.sendMessage(msg.chat.id, "Welcome", {
 "reply_markup": {
     "keyboard": [["Sample text", "Second sample"],   ["Keyboard"], ["I'm robot"]]
     }
 });
-    
+
 });
 ```
 So now if you run you will see:
@@ -215,7 +219,7 @@ if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
 And if you wanted to get user profile pictures you can use [getUserProfilePhotos](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md#telegrambotgetuserprofilephotosuserid-options--promise) .
 
  <a name="Inline+Keybords"></a>
-### Inline Keybords 
+### Inline Keybords
 This section is under construction...
 
 <a name="parse_mode"></a>
@@ -283,11 +287,11 @@ And if don't do that bot will only has access to [Commands](https://github.com/h
 So lets get back to creating that bot , actually we don't have to do anything diffrent than creating bot for a single user usage , everything is similiar.
 ```js
 bot.on('message', (msg) => {
-    
+
 var bye = "bye";
 if (msg.text.toString().toLowerCase().includes(bye)) {
-bot.sendMessage(msg.chat.id, "Have a nice day " + msg.from.first_name); 
-} 
+bot.sendMessage(msg.chat.id, "Have a nice day " + msg.from.first_name);
+}
 
 });
 ```
@@ -301,7 +305,7 @@ Now lets do another thing , write some codes that bot will remove a person from 
 Here we will write codes that if someone says anything containing "idiot" bot will remove that person from group.
 ```js
 bot.on('message', (msg) => {
-    
+
 var what = "idiot";
 if (msg.text.includes(what)) {
 bot.kickChatMember(msg.chat.id,  msg.from.id);
