@@ -1,7 +1,7 @@
 # node-telegram-bot-api-tutorial
 
 
-This is a beginners guide for [node-telegram-bot-api](https://github.com/yagop/node-telegram-bot-api) .
+This is a beginners' guide for [node-telegram-bot-api](https://github.com/yagop/node-telegram-bot-api) .
 
 
  - [Creating new bot with BotFather](#Creating+new+bot+with+BotFather)
@@ -29,9 +29,9 @@ Once your bot is created, you can set a Description for it. `Description` is a m
 
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/desc.JPG" height="500" width="500">
 
-To set description for your bot in BotFather do the following:
+To set Description for your bot in BotFather do the following:
 - Send <code>/setdescription</code> to BotFather
-- Select the bot for which you are writing a description
+- Select the bot for which you are writing a Description
 - Change the description and send it to BotFather 
 
 There are some other useful methods in BotFather which we won't cover in this tutorial like <code>/setcommands</code> and other.
