@@ -57,7 +57,7 @@ const token = 'YOUR_TELEGRAM_BOT_TOKEN';
 ```js
 const bot = new TelegramBot(token, {polling: true});
 ```
-  Lets try out our bot and do some real world things. We need to get messages that user sends us , to do so we would use following code:
+  Let's try out our bot and do some real world things. We need to get messages that user sends us , to do so we would use following code:
   
 ```js
 bot.on('message', (msg) => {
@@ -66,7 +66,7 @@ bot.on('message', (msg) => {
      
 });
 ```
-Lets create simple greeting here. Here's big picture of our code :
+Let's create simple greeting here. Here's big picture of our code :
 ```js
 const TelegramBot = require('node-telegram-bot-api'); 
 const token = 'YOUR_TELEGRAM_BOT_TOKEN';
@@ -131,7 +131,7 @@ bot.sendMessage(msg.chat.id, "Welcome");
     
 });
 ```
-  Lets create another command that will send a picture to user:
+  Let's create another command that will send a picture to user:
   
 ```js
 bot.onText(/\/sendpic/, (msg) => {
@@ -161,14 +161,14 @@ bot.sendPhoto(msg.chat.id,"https://www.somesite.com/image.jpg",{caption : "Here 
 
  <a name="Keyboards"></a>
 ### Keyboards
-Lets go a step further and start working with [keyboards](https://core.telegram.org/bots#keyboards).
-keyboards are atcually the ones shown in this picture:
+Let's go a step further and start working with [keyboards](https://core.telegram.org/bots#keyboards).
+keyboards are actually the ones shown in this picture:
 
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/keyboard.jpg" height="500" width="400">
 
 
 Keyboards are nothing but an easy way to send messages. It's like your not forcing users to write something down and send it to bot but instead your demonstrating them some options that they can tap on and a message will be sent after that.
-So lets see how we can create Keyboards , we'll send a Keyboard on "/start" message:
+So let's see how we can create Keyboards , we'll send a Keyboard on "/start" message:
 ```js
 bot.onText(/\/start/, (msg) => {
     
@@ -184,7 +184,7 @@ So now if you run you will see:
 
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Keyboards.JPG" height="500" width="400">
 
-As I said in fact Keyboards are not nothing but automatic type and send for user. There is no difference if you write "I'm robot" and sending on your own or you click on Keyboard. Lets do something simple when that "I'm robot"  is received.So add this up to your previous on message:
+As I said in fact Keyboards are not nothing but automatic type and send for user. There is no difference if you write "I'm robot" and sending on your own or you click on Keyboard. Let's do something simple when that "I'm robot"  is received.So add this up to your previous on message:
 ```js
 bot.on('message', (msg) => {
 var Hi = "hi";
@@ -223,8 +223,8 @@ This section is under construction...
 
 <a name="parse_mode"></a>
 ### parse_mode
-If you want to send messages with some style there, here is how it goes. <code>parse_mode</code> defines how you want you message to be renedered.You can define it inside in your options when sending message.
-Available option are HTML and Markdown.Lets see how it works in action:
+If you want to send messages with some style there, here is how it goes. <code>parse_mode</code> defines how you want you message to be rendered.You can define it inside in your options when sending message.
+Available option are HTML and Markdown.Let's see how it works in action:
 ```js
 bot.on('message', (msg) => {
 
@@ -278,12 +278,12 @@ To send a phone number you can use [sendContact](https://github.com/yagop/node-t
 
  <a name="grpups+and+channel+interaction"></a>
 ### Interacting with groups and channels
-One interesting use of bots is in goupes and channels.You can use bots to manage groupes , receiving users messages and sending groupe messages. You can even send keyboards to members so that they can use the bot easier.  
-For better understanding of how bots can be useful in goupes let create one and add it a group.  
+One interesting use of bots is in groups and channels.You can use bots to manage groups , receiving users messages and sending group messages. You can even send keyboards to members so that they can use the bot easier.  
+For better understanding of how bots can be useful in groups let's create one and add it to a group.  
 So we want to create a bot that says "Have a nice day _Username_" when any member of group said something containing "Bye" keyword.
 Before doing anything you have to know that a bot has no accessibility to users messages unless we add it as of a administrator.
 And if don't do that bot will only has access to [Commands](https://github.com/hosein2398/node-telegram-bot-api-tutorial#commands) that any user sends to group.And all of this is because of the [privacy policy](https://core.telegram.org/bots#privacy-mode) that Telegram messenger follows which I think is right.
-So lets get back to creating that bot , actually we don't have to do anything diffrent than creating bot for a single user usage , everything is similiar.
+So let's get back to creating that bot , actually we don't have to do anything different than creating bot for a single user usage , everything is similar.
 ```js
 bot.on('message', (msg) => {
     
@@ -300,7 +300,7 @@ Now say something that includes "bye":
 
 <img src="https://raw.githubusercontent.com/hosein2398/node-telegram-bot-api-tutorial/master/pics/Bot.JPG" height="500" width="400">
 
-Now lets do another thing , write some codes that bot will remove a person from group if they say a specific word.For instance you can create a bot that will remove member if they curse in group.  
+Now let's do another thing , write some codes that bot will remove a person from group if they say a specific word.For instance you can create a bot that will remove member if they curse in group.  
 Here we will write codes that if someone says anything containing "idiot" bot will remove that person from group.
 ```js
 bot.on('message', (msg) => {
