@@ -219,8 +219,30 @@ And if you wanted to get user profile pictures you can use [getUserProfilePhotos
 
  <a name="Inline+Keybords"></a>
 ### Inline Keybords 
-This section is under construction...
+You can use the inline keyboard in the following way:
+```js
+var keyboard = {
+  reply_markup: JSON.stringify({
+    inline_keyboard: [
+      [{ text: 'Button 1', callback_data: '1' }],
+      [{ text: 'Button 2', callback_data: 'data 2' }],
+      [{ text: 'Button 3', callback_data: 'data 3' }]
+    ]
+  })
+};
 
+bot.onText(/\/start/, function (msg) {
+  bot.sendMessage(msg.chat.id, "Text", keyboard);
+});
+```
+To process a button click use callback_query:
+```js
+bot.on('callback_query', function (msg) {
+    if(msg.data == "1") {
+        bot.sendMessage(msg.from.id, "You clicked on Button 1");
+    }
+});
+```
 <a name="parse_mode"></a>
 ### parse_mode
 If you want to send messages with some style there, here is how it goes. <code>parse_mode</code> defines how you want you message to be rendered.You can define it inside in your options when sending message.
